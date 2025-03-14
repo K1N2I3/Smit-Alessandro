@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alessandro Smit</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 模态框 -->
+    <div id="imageModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImg">
+    </div>
+
+    <div id="textModal" class="modal">
+        <div class="modal-text-content">
+            <span class="close">&times;</span>
+            <h2 id="modalTitle"></h2>
+            <div id="modalText"></div>
+        </div>
+    </div>
+
+    <div class="hero">
+        <div class="slideshow-container">
+            <div class="slides fade">
+                <img src="IMG_0818.jpg" alt="Alessandro" class="profile-img" onclick="openImageModal(this)">
+            </div>
+            <!-- 添加更多照片 -->
+            <div class="slides fade">
+                <img src="IMG_0835.JPG" alt="Alessandro" class="profile-img" onclick="openImageModal(this)">
+            </div>
+            <div class="slides fade">
+                <img src="IMG_0819.JPG" alt="Alessandro" class="profile-img" onclick="openImageModal(this)">
+            </div>
+            
+            <!-- 添加前后按钮 -->
+            <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+            <a class="next" onclick="changeSlide(1)">&#10095;</a>
+            
+            <!-- 添加指示点 -->
+            <div class="dots-container">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+        </div>
+        <h1>Alessandro Smit</h1>
+    </div>
+
+    <div class="container">
+        <div class="info-section">
+            <div class="info-item" onclick="openTextModal('Celebrating Smit Alessandro: A Beacon of Excellence, Kindness, and Inspiration in Our Class', this)">
+                <h2>Celebrating Smit Alessandro: A Beacon of Excellence, Kindness, and Inspiration in Our Class</h2>
+                <p class="preview-text">In every classroom, there are individuals who leave an indelible mark not just through their achievements, but through the warmth of their character and the quiet consistency of their actions. Smit Alessandro is one such person—a classmate whose presence elevates the spirit of our class, whose dedication inspires peers, and whose kindness reminds us all of the power of empathy. From academic brilliance to unwavering support for others, Smit embodies what it means to be both a scholar and a friend.</p>
+                <div class="full-text" style="display: none">
+                    In every classroom, there are individuals who leave an indelible mark not just through their achievements, but through the warmth of their character and the quiet consistency of their actions. Smit Alessandro is one such person—a classmate whose presence elevates the spirit of our class, whose dedication inspires peers, and whose kindness reminds us all of the power of empathy. From academic brilliance to unwavering support for others, Smit embodies what it means to be both a scholar and a friend.
+                </div>
+            </div>
+
+            <div class="info-item" onclick="openTextModal('Academic Excellence: A Mind Built for Curiosity', this)">
+                <h2>Academic Excellence: A Mind Built for Curiosity</h2>
+                <p class="preview-text">Smit approaches learning with a rare combination of discipline and passion. Whether tackling complex equations in mathematics, dissecting literary themes in English, or innovating in science labs, he consistently demonstrates a razor-sharp intellect. But what sets him apart is not just his ability to excel—it's his hunger to understand. He asks questions that push discussions deeper, shares insights that spark "aha!" moments for others, and never hesitates to stay after class to unravel a challenging concept. His notebooks are legendary, filled with color-coded diagrams and margin notes that reveal a mind always striving to connect ideas. Teachers admire his rigor, and peers quietly borrow his study strategies, hoping to emulate his success.</p>
+                <div class="full-text" style="display: none">
+                    Smit approaches learning with a rare combination of discipline and passion. Whether tackling complex equations in mathematics, dissecting literary themes in English, or innovating in science labs, he consistently demonstrates a razor-sharp intellect. But what sets him apart is not just his ability to excel—it's his hunger to understand. He asks questions that push discussions deeper, shares insights that spark "aha!" moments for others, and never hesitates to stay after class to unravel a challenging concept. His notebooks are legendary, filled with color-coded diagrams and margin notes that reveal a mind always striving to connect ideas. Teachers admire his rigor, and peers quietly borrow his study strategies, hoping to emulate his success.
+                </div>
+            </div>
+
+            <div class="info-item" onclick="openTextModal('Creativity and Innovation: Turning Ideas into Action', this)">
+                <h2>Creativity and Innovation: Turning Ideas into Action</h2>
+                <p class="preview-text">Beyond textbooks, Smit is a visionary. Last semester, when our history class was assigned a project on ancient civilizations, he didn't just submit a presentation—he built a 3D-printed model of the Roman Colosseum, complete with a voiceover script narrated in Latin snippets he taught himself. His creativity isn't confined to academics, either. During the school's annual talent show, he surprised everyone by performing an original piano composition that blended classical motifs with modern beats. Smit proves that creativity isn't about flashy gestures; it's about seeing possibilities where others see limits.</p>
+                <div class="full-text" style="display: none">
+                    Beyond textbooks, Smit is a visionary. Last semester, when our history class was assigned a project on ancient civilizations, he didn't just submit a presentation—he built a 3D-printed model of the Roman Colosseum, complete with a voiceover script narrated in Latin snippets he taught himself. His creativity isn't confined to academics, either. During the school's annual talent show, he surprised everyone by performing an original piano composition that blended classical motifs with modern beats. Smit proves that creativity isn't about flashy gestures; it's about seeing possibilities where others see limits.
+                </div>
+            </div>
+
+            <div class="info-item" onclick="openTextModal('Kindness: The Heart That Lifts Others Up', this)">
+                <h2>Kindness: The Heart That Lifts Others Up</h2>
+                <p class="preview-text">If you've ever felt lost in class, chances are Smit noticed—and quietly reached out. I'll never forget the time I struggled with a coding assignment, staring blankly at my screen. Without fanfare, Smit pulled up a chair, broke down the problem step by step, and stayed late until the code finally ran smoothly. His patience is boundless, his explanations thoughtful. He doesn't help for praise; he helps because he genuinely cares. This kindness extends beyond academics. When a classmate missed weeks of school due to illness, Smit organized a group to share notes and even dropped off homemade soup. His empathy isn't performative; it's woven into who he is.</p>
+                <div class="full-text" style="display: none">
+                    If you've ever felt lost in class, chances are Smit noticed—and quietly reached out. I'll never forget the time I struggled with a coding assignment, staring blankly at my screen. Without fanfare, Smit pulled up a chair, broke down the problem step by step, and stayed late until the code finally ran smoothly. His patience is boundless, his explanations thoughtful. He doesn't help for praise; he helps because he genuinely cares. This kindness extends beyond academics. When a classmate missed weeks of school due to illness, Smit organized a group to share notes and even dropped off homemade soup. His empathy isn't performative; it's woven into who he is.
+                </div>
+            </div>
+
+            <div class="info-item" onclick="openTextModal('Leadership: Guiding Without Ego', this)">
+                <h2>Leadership: Guiding Without Ego</h2>
+                <p class="preview-text">As captain of the debate team, Smit leads with humility. He doesn't dominate discussions but instead cultivates confidence in quieter members. During practice, you'll hear him say, "What if we try your idea, Riya?" or "Let's build on Jay's point." His leadership style is collaborative, recognizing that the team's strength lies in its diversity of voices. Outside competitions, he's the first to celebrate others' wins, whether it's a teammate's promotion to varsity or a rival school's innovative argument. To Smit, leadership isn't about standing above—it's about standing with others.</p>
+                <div class="full-text" style="display: none">
+                    As captain of the debate team, Smit leads with humility. He doesn't dominate discussions but instead cultivates confidence in quieter members. During practice, you'll hear him say, "What if we try your idea, Riya?" or "Let's build on Jay's point." His leadership style is collaborative, recognizing that the team's strength lies in its diversity of voices. Outside competitions, he's the first to celebrate others' wins, whether it's a teammate's promotion to varsity or a rival school's innovative argument. To Smit, leadership isn't about standing above—it's about standing with others.
+                </div>
+            </div>
+
+            <div class="info-item" onclick="openTextModal('Humor and Positivity: The Glue of Our Class', this)">
+                <h2>Humor and Positivity: The Glue of Our Class</h2>
+                <p class="preview-text">Even on stressful days, Smit's wit is a lifeline. His jokes are never at someone's expense—instead, he diffuses tension with playful sarcasm or a well-timed meme reference. During exam week, he'll stroll into class wearing a T-shirt that says, "I survived another all-nighter (barely)" and toss candy to everyone "for moral support." His laughter is infectious, his optimism unshakable. When group projects hit roadblocks, he's the one saying, "We've got this—let's pivot!" He reminds us that joy and hard work aren't mutually exclusive.</p>
+                <div class="full-text" style="display: none">
+                    Even on stressful days, Smit's wit is a lifeline. His jokes are never at someone's expense—instead, he diffuses tension with playful sarcasm or a well-timed meme reference. During exam week, he'll stroll into class wearing a T-shirt that says, "I survived another all-nighter (barely)" and toss candy to everyone "for moral support." His laughter is infectious, his optimism unshakable. When group projects hit roadblocks, he's the one saying, "We've got this—let's pivot!" He reminds us that joy and hard work aren't mutually exclusive.
+                </div>
+            </div>
+
+            <div class="info-item" onclick="openTextModal('Perseverance: Quiet Resilience', this)">
+                <h2>Perseverance: Quiet Resilience</h2>
+                <p class="preview-text">Behind Smit's achievements lies a story of quiet determination. Last year, when his robotics project malfunctioned days before a national competition, he didn't complain. Instead, he spent three sleepless nights rewiring circuits and recalibrating sensors. When asked how he stayed motivated, he shrugged and said, "Failure's just a rough draft." This resilience isn't just personal—it inspires others to keep going. When our soccer team trailed 0-2 at halftime, it was Smit who rallied the squad with, "One goal at a time. Let's make the second half ours."</p>
+                <div class="full-text" style="display: none">
+                    Behind Smit's achievements lies a story of quiet determination. Last year, when his robotics project malfunctioned days before a national competition, he didn't complain. Instead, he spent three sleepless nights rewiring circuits and recalibrating sensors. When asked how he stayed motivated, he shrugged and said, "Failure's just a rough draft." This resilience isn't just personal—it inspires others to keep going. When our soccer team trailed 0-2 at halftime, it was Smit who rallied the squad with, "One goal at a time. Let's make the second half ours."
+                </div>
+            </div>
+
+            <div class="info-item" onclick="openTextModal('Conclusion: A Classmate Like No Other', this)">
+                <h2>Conclusion: A Classmate Like No Other</h2>
+                <p class="preview-text">Smit Alessandro isn't just a star student or a reliable friend—he's the kind of person who makes you believe in the best version of yourself. His intelligence challenges us, his compassion softens us, and his humor unites us. In a world that often prioritizes individual success, Smit reminds us that true greatness lies in lifting others as you climb. Our class isn't just lucky to have him; we're better because of him. Here's to Smit—a future innovator, a lifelong friend, and the heartbeat of our classroom. May we all strive to mirror even a fraction of his integrity and grace.</p>
+                <div class="full-text" style="display: none">
+                    Smit Alessandro isn't just a star student or a reliable friend—he's the kind of person who makes you believe in the best version of yourself. His intelligence challenges us, his compassion softens us, and his humor unites us. In a world that often prioritizes individual success, Smit reminds us that true greatness lies in lifting others as you climb. Our class isn't just lucky to have him; we're better because of him. Here's to Smit—a future innovator, a lifelong friend, and the heartbeat of our classroom. May we all strive to mirror even a fraction of his integrity and grace.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
